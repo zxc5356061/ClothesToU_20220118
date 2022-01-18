@@ -195,12 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\CoreServices\Interfaces\" />
-    <Folder Include="Models\Entities\" />
-    <Folder Include="Models\Infrastructures\Entities\" />
-    <Folder Include="Models\Infrastructures\Extensions\" />
-    <Folder Include="Models\UseCases\" />
-    <Folder Include="Models\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
