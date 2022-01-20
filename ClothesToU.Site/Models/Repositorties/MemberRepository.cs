@@ -27,6 +27,7 @@ namespace ClothesToU.Site.Models.Repositorties
                 Password = entity.EncryptedPassword,
                 Name = entity.Name,
                 Mobile = entity.Mobile,
+                Address = entity.Address,
                 IsConfirmed = true,//待日後實作信件驗證再修改
                 ConfirmCode = entity.ConfirmCode
             };
