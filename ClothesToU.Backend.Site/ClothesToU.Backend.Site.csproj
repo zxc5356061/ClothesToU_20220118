@@ -145,15 +145,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Class1.cs" />
-    <Compile Include="Models\EFModels\AppDbContext.cs" />
-    <Compile Include="Models\EFModels\Cart.cs" />
-    <Compile Include="Models\EFModels\CartItem.cs" />
-    <Compile Include="Models\EFModels\Category.cs" />
-    <Compile Include="Models\EFModels\Member.cs" />
-    <Compile Include="Models\EFModels\Order.cs" />
-    <Compile Include="Models\EFModels\OrderItem.cs" />
-    <Compile Include="Models\EFModels\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\EFModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
