@@ -8,6 +8,8 @@ namespace ClothesToU.Site.Models.Core.Interfaces
 {
     internal interface IMemberRepository
     {
+        bool IsExist(string account);
+       
 
     }
 }

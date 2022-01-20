@@ -147,6 +147,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Core\Interfaces\IMemberRepository.cs" />
+    <Compile Include="Models\Core\MemberService.cs" />
     <Compile Include="Models\EFModels\AppDbContext.cs" />
     <Compile Include="Models\EFModels\Cart.cs" />
     <Compile Include="Models\EFModels\CartItem.cs" />
@@ -158,6 +159,7 @@
     <Compile Include="Models\Entities\RegisterEntity.cs" />
     <Compile Include="Models\Extensions\RegisterEntityExt.cs" />
     <Compile Include="Models\Extensions\RegisterRequestExt.cs" />
+    <Compile Include="Models\Repositorties\MemberRepository.cs" />
     <Compile Include="Models\UseCases\RegisterCommand.cs" />
     <Compile Include="Models\UseCases\RegisterRequest.cs" />
     <Compile Include="Models\UseCases\RegisterResponse.cs" />
@@ -204,7 +206,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Repositorties\" />
     <Folder Include="Views\Members\" />
   </ItemGroup>
   <ItemGroup>
