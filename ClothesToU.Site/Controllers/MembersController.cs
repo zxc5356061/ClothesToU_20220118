@@ -1,4 +1,5 @@
-﻿using ClothesToU.Site.Models.ViewModels;
+﻿using ClothesToU.Site.Models.UseCases;
+using ClothesToU.Site.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,18 @@ namespace ClothesToU.Site.Controllers
                 return View(registerVM);
             }
 
+            RegisterCommand command = new RegisterCommand();
+            RegisterResponse response = command.Execute(registerVM);
+            if(response.IsSuccess == true)
+            {
+                // 建檔成功 redirect to confirm page
+                return View("RegisterConfirm");
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, response.ErrorMessage);
+                return View(registerVM);
+            }
 
         }
     }

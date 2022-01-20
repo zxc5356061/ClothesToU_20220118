@@ -19,5 +19,6 @@ namespace ClothesToU.Site.Models.Infrastructures.Extensions
                 Mobile = source.Mobile,
                 Address = source.Address,
             };
+        }
     }
 }
