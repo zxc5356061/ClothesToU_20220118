@@ -46,6 +46,13 @@ namespace ClothesToU.Site.Models.Core
 				Address = request.Address,
 				ConfirmCode = confirmCode,
 			};
+			repository.Create(registerEntity);
+
+			return new RegisterResponse
+			{
+				IsSuccess = true,
+				Data = registerEntity
+			};
 
 		}
 	}
