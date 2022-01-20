@@ -159,6 +159,7 @@
     <Compile Include="Models\Entities\RegisterEntity.cs" />
     <Compile Include="Models\Extensions\RegisterEntityExt.cs" />
     <Compile Include="Models\Extensions\RegisterRequestExt.cs" />
+    <Compile Include="Models\Infrastructures\HashUtility.cs" />
     <Compile Include="Models\Repositorties\MemberRepository.cs" />
     <Compile Include="Models\UseCases\RegisterCommand.cs" />
     <Compile Include="Models\UseCases\RegisterRequest.cs" />

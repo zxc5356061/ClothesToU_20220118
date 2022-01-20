@@ -29,6 +29,10 @@
 <li>[] implement MembersController.Register() function</li>
 <li>[] implement RegisterCommand.Execute function</li>
 add IMemberRepository
+add MemberRepository
+	public bool IsExist(string account)
+	void Create(MemberEntity entity);
+add public static class HashUtility
 <li>[] add new /Models/Infrastructures/Repositories/MemberRepository</li>
 </ul>
 
