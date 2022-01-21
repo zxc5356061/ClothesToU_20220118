@@ -1,47 +1,68 @@
-﻿## Keywords
-<ul>
-<li>ABC</li>
-</ul>
-<hr>
-
-# MemberService
+﻿*** MemberService ***
 ## New Member Register
-<br>
 ## Member Login
-<br>
 ## Forgot Password
-<br>
 ## Update Member data
+## MemberData CRUD
+======================
 
-<hr>
 ## New Member Register
-<ul>
-<li>[v] add /Models/EFModels/AppDbContext</li>
-<li>[v] add /Models/Core/ViewModels/RegisterVM</li>
+[v] add /Models/EFModels/AppDbContext
 
-<li>[v] add /Models/UseCases/RegisterRequest class</li>
-<li>[v] add /Models/Entities/RegisterEntity class</li>
+[v] add /Models/Core/ViewModels/RegisterVM
+		-public string Account { get; set; }
+		-public string Password { get; set; }
+		-public string ConfirmPassword { get; set; }
+		-public string Name { get; set; }
+		-public string Mobile { get; set; }
+		-public string Address { get; set; }
 
-<li>[v] add Controllers/MembersController/</li>
-<li>[] add /Models/UseCases/RegisterCommand class( with Execute method)</li>
-<li>[] add /Models/UseCases/RegisterResponse class</li>
-<li>[] add /Models/Core/MemberService class(with CreateNewMember method)</li>
-<li>[] implement MembersController.Register() function</li>
-<li>[] implement RegisterCommand.Execute function</li>
+[v] add /Models/UseCases/RegisterRequest class
+		-public string Account { get; set; }
+		-public string Password { get; set; }
+		-public string Name { get; set; }
+		-public string Mobile { get; set; }
+		-public string Address { get; set; }
+
+[v] add /Models/UseCases/RegisterResponse class
+		-public bool IsSuccess { get; set; }
+		-public string ErrorMessage { get; set; }
+		-public RegisterEntity Data { get; set; }
+
+[v] add /Models/Entities/RegisterEntity class
+		-public string Account { get; set; }
+		-public string Password { get; set; }
+		-public string Name { get; set; }
+		-public string Mobile { get; set; }
+		-public string Address { get; set; }
+		-public string ConfirmCode { get; set; }
+		-public const string SALT = "!@#";
+		-public string EncryptedPassword { get; }
+
+[v] add /Models/Extensions
+		-RegisterEntityExt
+			public static Member ToEFMember(this RegisterEntity source)
+		-RegisterRequestExt
+			public static RegisterEntity ToRegisterEntity(this RegisterRequest source)
+		-RegisterVMExt
+			public static RegisterRequest ToRegisterRequest(this RegisterVM source)
+
+[v] add /Models/Core/MemberServices
+		-public RegisterResponse CreateNewMember(RegisterRequest request)
+
+[v] add /Controllers/MembersController/
+		-public ActionResult Index()
+		-public ActionResult Register()
+		-[HttpPost]public ActionResult Register(RegisterVM registerVM)
+
+[] add /Models/UseCases/RegisterCommand class( with Execute method)
+[] add /Models/UseCases/RegisterResponse class
+[] add /Models/Core/MemberService class(with CreateNewMember method)
+[] implement MembersController.Register() function
+[] implement RegisterCommand.Execute functio
 add IMemberRepository
 add MemberRepository
 	public bool IsExist(string account)
 	void Create(MemberEntity entity);
 add public static class HashUtility
-<li>[] add new /Models/Infrastructures/Repositories/MemberRepository</li>
-</ul>
-
-<hr>
-## Member Login
-
-<hr>
-## Forgot Password
-
-<hr>
-
-Remove Backend Site
+<li-[] add new /Models/Infrastructures/Repositories/MemberRepository</li-

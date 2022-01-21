@@ -11,12 +11,12 @@ namespace ClothesToU.Site.Models.Core
 {
     public class MemberService
     {
-		private readonly IMemberRepository repository;
+		private readonly IRegisterRepository repository;
 		public MemberService()
 		{
-			this.repository = new MemberRepository();
+			this.repository = new RegisterRepository();
 		}
-		public MemberService(IMemberRepository repo)
+		public MemberService(IRegisterRepository repo)
 		{
 			this.repository = repo;
 		}

@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ClothesToU.Site.Models.Repositorties
 {
-    public class MemberRepository : IMemberRepository
+    public class RegisterRepository : IRegisterRepository
     {
         private AppDbContext db = new AppDbContext();
 
