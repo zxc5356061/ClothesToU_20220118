@@ -98,12 +98,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClothesToU.Backend.Site\ClothesToU.Backend.Site.csproj">
-      <Project>{42740797-800A-45F8-8FE3-C7745498FE14}</Project>
-      <Name>ClothesToU.Backend.Site</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
