@@ -1,9 +1,9 @@
 ﻿*** MemberService ***
-## New Member Register
-## Member Login
-## Forgot Password
-## Update Member data
-## MemberData CRUD
+## [v] New Member Register
+## [working] Member Login
+## [] Forgot Password
+## [] Update Member data
+## [] MemberData CRUD
 ======================
 
 ## New Member Register
@@ -55,14 +55,15 @@
 		-public ActionResult Register()
 		-[HttpPost]public ActionResult Register(RegisterVM registerVM)
 
-[] add /Models/UseCases/RegisterCommand class( with Execute method)
-[] add /Models/UseCases/RegisterResponse class
-[] add /Models/Core/MemberService class(with CreateNewMember method)
-[] implement MembersController.Register() function
-[] implement RegisterCommand.Execute functio
-add IMemberRepository
-add MemberRepository
-	public bool IsExist(string account)
-	void Create(MemberEntity entity);
-add public static class HashUtility
-<li-[] add new /Models/Infrastructures/Repositories/MemberRepository</li-
+[v] add /Models/UseCases/RegisterCommand class( with Execute method)
+		-public RegisterResponse Execute(RegisterVM registerVM)
+
+[v] add IRegisterRepository & RegisterRepository
+		-bool IsExist(string account);
+		-void Create(RegisterEntity entity);
+
+[v] add /Views/Members/Register.cshtml(create)
+[v] add /Views/Members/Register.cshtml(empty)
+======================
+
+## Member Login
